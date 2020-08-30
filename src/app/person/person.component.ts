@@ -1,9 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
 selector:'app-person',
 templateUrl:'./person.component.html'
 })
 export class PersonComponent{
+  @Input()
+  personList: string[];
 
 }
