@@ -2,8 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {PersonComponent} from './person/person.component';
+import { PersonComponent } from './person/person.component';
 import { PersonInputComponent } from './person/person-input.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing.module';
+import { PsersonService } from './person/person.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +16,12 @@ import { PersonInputComponent } from './person/person-input.component';
     PersonInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PsersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
